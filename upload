@@ -1,0 +1,6 @@
+#! /bin/bash
+
+rsync -trp --omit-dir-times --delete ./web/app/ user@host:/var/www/vhosts/app_name/app/
+rsync -trp --omit-dir-times --delete ./web/public/ user@host:/var/www/vhosts/app_name/httpdocs/
+
+echo "Upload complete"
